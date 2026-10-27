@@ -6,13 +6,7 @@ abstract class Person {
   void showInformation();
 }
 
-mixin StudentActivities {
-  void showActivities() {
-    print('The student attends classes and completes assignments.');
-  }
-}
-
-class Student extends Person with StudentActivities {
+class Student extends Person {
   String studentNumber;
   String course;
 
@@ -59,10 +53,8 @@ Future<void> main() async {
     '3rd Year',
   );
 
-  print('=== STUDENT INFORMATION SYSTEM ===');
-
+  print('Student Information System');
   student.showInformation();
-  student.showActivities();
 
   print('\nPreparing to save the student record...');
   print('The program is waiting for the saving process.');
@@ -72,4 +64,3 @@ Future<void> main() async {
   print(result);
   print('\nProgram finished.');
 }
-
